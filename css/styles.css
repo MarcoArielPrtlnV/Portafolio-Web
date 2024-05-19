@@ -28,6 +28,8 @@ html {
 }
 
 
+
+
 body {
 
     margin: 0;
@@ -206,7 +208,7 @@ span {
 /*     display: flex;
     flex-direction: column;
     justify-content: center; */
-    padding: 5em;
+    padding: 3em;
 }
 
 .portfolio-heading h2 {
@@ -378,7 +380,7 @@ span {
 
 .footer-content {
 
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .span-footer {
@@ -413,6 +415,7 @@ span {
 .contact-section p {
 
     font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 
