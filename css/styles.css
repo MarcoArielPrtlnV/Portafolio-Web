@@ -107,6 +107,12 @@ header{
     transition: ease-in .4s;
 }
 
+.toggle-menu,
+.info_content .social-network {
+
+   display: none;
+}
+
 .main {
 
     margin: 0 auto;
@@ -119,7 +125,8 @@ header{
 
 h1 {
 
-    font-size: 3em;
+    font-size: clamp(4vw, 1.5em, 3em);
+    margin-bottom: 10px;
 }
 
 span {
@@ -172,6 +179,7 @@ span {
 
     grid-column: 5/10;
     padding: 3em;
+    margin-bottom: 4em;
 
 }
 
@@ -220,10 +228,11 @@ span {
 .portfolio .container {
 
     width: 80vw;
-    height: 80vh;
+    /* height: 80vh; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -394,6 +403,7 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     width: 250px;
     margin-top: 1em;
 }
@@ -475,4 +485,113 @@ span {
     visibility: hidden;
     opacity: 0;
 
+}
+
+@media screen and (max-width: 800px) {
+
+    .menu {
+
+        
+        flex-direction: column;
+        justify-content: center;
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: #112c57;
+        z-index: 1;
+        transform: translateX(-110%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .show-menu {
+
+        transform: translateX(0%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .menu li {
+
+        margin: 1.5em;
+    }
+
+    .toggle-menu {
+
+        display: block;
+    }
+
+    .toggle-menu i {
+
+        color: #fff;
+    }
+
+    .fa-bars {
+
+
+        font-size: 1.5em;
+        margin-top: -0.2em;
+    }
+
+    .toggle-menu .fa-close {
+
+        font-size: 1.7em;
+        display: none;
+    }
+
+    .main,
+    .about {
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .main img {
+
+        width: min(70%, 350px);
+    }
+
+    .info_content {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .info_content__p {
+
+        display: none;
+    }
+
+    .info_content .social-network {
+
+        display: block;
+        
+        
+    }
+
+    .info_content .social-network {
+
+        
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .info_content .social-network i {
+
+        color: #fff;
+    }
+
+    .download_cv {
+
+        display: none;
+    }
+
+    .about img {
+
+        width: 100%;
+        grid-column: 1 / 5;
+        margin-top: -5em;
+    }
 }
